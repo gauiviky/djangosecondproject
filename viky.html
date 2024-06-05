@@ -1,0 +1,12 @@
+{% extends 'demoapp/file.html' %}
+{% load static %}
+{% block main %}
+<center> 
+    <img src="{% static 'viky.jpeg' %}" alt="img" width="700px" height="700px"/>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, ea doloremque repudiandae aut inventore rem ex perspiciatis quidem earum velit. Excepturi, aliquid qui! Voluptate explicabo non, nemo sint excepturi totam.</p>
+  </center>
+  {{Dhoni}}
+  {{Time}}
+  <br>
+  <a href="{% url 'thyon' %}">Next</a>
+{% endblock %}

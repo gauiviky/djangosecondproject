@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <center><table>
+        <tr>
+       <th>Emp_id</th><th>Emp_Name</th><th>Dept_Name</th><th>Roles</th><th>Emp_Address</th>
+        </tr>
+        {% for i in html %}
+        <tr>
+            <td>{{i.Emp_id}}</td>
+            <td>{{i.Emp_Name}}</td>
+            <td>{{i.Dept_Name}}</td>
+            <td>{{i.Roles}}</td>
+            <td>{{i.Emp_Address}}</td>
+            <td><a href="{% url 'Update' i.Emp_id %}">Update</a></td>
+            <td><a href="{% url 'Delete' i.Emp_id %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+</body>
+</html>
